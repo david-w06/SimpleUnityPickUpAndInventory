@@ -13,22 +13,6 @@ A clean, modular pickup and inventory system for Unity 3D. Drop it into any proj
 - **Toggle with `I`** — press `I` at runtime to show/hide the inventory panel
 - **ScriptableObject items** — each item type is a lightweight data asset; no prefab duplication needed
 
----
-
-## Project Structure
-
-```
-Assets/
-├── Script/
-│   ├── ItemData.cs          # ScriptableObject — defines an item (name, icon, stackable, maxStack)
-│   ├── InventorySlot.cs     # Plain C# data class — one slot (item + quantity)
-│   ├── Inventory.cs         # MonoBehaviour — holds the slot list, handles stacking logic
-│   ├── CollectionManager.cs # Singleton — receives pickups and routes them to the Inventory
-│   ├── Collectible.cs       # MonoBehaviour — attach to any 3D pickup object
-│   ├── InventoryUI.cs       # MonoBehaviour — drives the Canvas panel, grid layout, and I-key toggle
-│   └── InventorySlotUI.cs   # MonoBehaviour — updates a single slot's icon and quantity label
-└── Items/                   # Your ItemData ScriptableObject assets live here
-```
 
 ---
 
@@ -120,7 +104,3 @@ Press [I] → Inventory panel toggles on/off
 - **TextMeshPro** package
 
 ---
-
-## License
-
-MIT — free to use in any project, commercial or otherwise.
